@@ -1,0 +1,15 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "DelegateS3Access",
+            "Effect": "Allow",
+            "Principal": {"AWS": "arn:aws:iam::305186823186:role/S3MigrationRole"},
+            "Action": ["s3:ListBucket","s3:GetObject"],
+            "Resource": [
+                "arn:aws:s3:::diamondage-childrensnational-data/*",
+                "arn:aws:s3:::diamondage-childrensnational-data"
+            ]
+        }
+    ]
+}
